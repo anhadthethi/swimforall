@@ -62,7 +62,6 @@ export default function Footer() {
               <div className="flex space-x-4">
                 <a href="#" className="text-slate-300 hover:text-white">Facebook</a>
                 <a href="#" className="text-slate-300 hover:text-white">Instagram</a>
-                <a href="#" className="text-slate-300 hover:text-white">Twitter</a>
               </div>
               <div className="mt-4">
                 <p className="text-slate-300 mb-2">Subscribe to our newsletter</p>

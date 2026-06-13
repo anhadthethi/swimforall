@@ -256,7 +256,7 @@ export default function GetKit() {
               <div className="space-y-6">
                 <div>
                   <label htmlFor="reason" className="block text-sm font-medium text-gray-700 mb-2">
-                    Why is your child interested in swimming? *
+                    What's your child interested in about swimming? *
                   </label>
                   <Textarea
                     id="reason"
@@ -365,13 +365,14 @@ export default function GetKit() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-white rounded-lg shadow-lg overflow-hidden h-96 flex items-center justify-center"
+            className="max-w-xl mx-auto bg-white rounded-2xl shadow-xl border border-gray-200 p-3"
           >
-            <div className="text-center text-gray-400">
-              <div className="text-6xl mb-4">📦</div>
-              <p className="text-lg font-semibold mb-2">Kit Contents Photo</p>
-              <p className="text-sm opacity-75">Flat-lay: goggles, cap, kickboard, fins on towel</p>
-              <p className="text-xs opacity-50 mt-2">Natural lighting, soft background</p>
+            <div className="aspect-[3/4] bg-gray-50 rounded-xl overflow-hidden">
+              <img
+                src="/images/kit-contents-flatlay.png"
+                alt="Swim kit contents including towel, kickboard, goggles, swim cap, stickers, and guide"
+                className="w-full h-full object-contain p-3"
+              />
             </div>
           </motion.div>
         </div>
@@ -400,9 +401,9 @@ export default function GetKit() {
             {[
               { item: "Swim Goggles", desc: "UV-protective, adjustable fit for comfort", emoji: "🥽" },
               { item: "Kickboard", desc: "Essential beginner gear for building confidence", emoji: "🏊" },
-              { item: "Short Training Fins", desc: "Help children feel comfortable moving through water", emoji: "🏊" },
-              { item: "Silicone Cap", desc: "Comfortable swim cap for all hair types", emoji: "🏊" },
               { item: "Towel", desc: "Quick-dry microfiber towel", emoji: "🧺" },
+              { item: "Silicone Cap", desc: "Comfortable swim cap for all hair types", emoji: "🏊" },
+              { item: "Stickers", desc: "Fun swim-themed stickers kids can use on bottles or notebooks", emoji: "🩵" },
               { item: "Getting Started Guide", desc: "Local pool info, lesson tips, and safety reminders", emoji: "📋" }
             ].map((kitItem, index) => (
               <motion.div
@@ -465,7 +466,7 @@ export default function GetKit() {
             >
               <h3 className="text-xl font-semibold text-gray-800 mb-4">This Program May Not Be the Right Fit If:</h3>
               <ul className="space-y-2 text-gray-700">
-                <li>• Child is not between the ages of 8–12</li>
+                <li>• Child is under 8 or over 12</li>
                 <li>• Family income exceeds program guidelines</li>
                 <li>• Child requires one-on-one or specialized instruction</li>
                 <li>• Kit was received in the last 2 years</li>

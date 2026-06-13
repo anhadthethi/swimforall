@@ -12,9 +12,9 @@ export default function Donate() {
   const [formData, setFormData] = useState({ firstName: "", email: "" });
 
   const donationAmounts = [
-    { amount: 25, description: "Funds a complete beginner swim kit for one child" },
-    { amount: 50, description: "Funds a kit plus cleaning, sanitization, and transportation support" },
-    { amount: 100, description: "Supports multiple kits plus prep, packing, and local delivery" }
+    { amount: 25, description: "One Child's First Kit: goggles, cap & kickboard for day one" },
+    { amount: 50, description: "Kit + Ready to Swim: full kit, sanitized and delivered" },
+    { amount: 100, description: "Change a Whole Family: funds 4 kids' kits plus logistics" }
   ];
 
   const handleAmountSelect = (amount: number) => {
@@ -82,7 +82,7 @@ export default function Donate() {
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-600 font-bold mr-3">✓</span>
-                      <span>Short training fins</span>
+                      <span>Towels</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-600 font-bold mr-3">✓</span>
@@ -91,6 +91,10 @@ export default function Donate() {
                     <li className="flex items-start">
                       <span className="text-green-600 font-bold mr-3">✓</span>
                       <span>Silicone swim caps</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-600 font-bold mr-3">✓</span>
+                      <span>Swim-themed stickers</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-green-600 font-bold mr-3">✓</span>
@@ -343,10 +347,11 @@ export default function Donate() {
                 <h4 className="font-semibold">What we accept:</h4>
                 <ul className="list-disc list-inside text-gray-700 space-y-1">
                   <li>Kickboards</li>
-                  <li>Short training fins</li>
+                  <li>Towels</li>
                   <li>Mesh bags</li>
                   <li>Goggles (clean, functional)</li>
                   <li>Silicone swim caps</li>
+                  <li>Swim-themed stickers</li>
                 </ul>
                 <Button
                   className="w-full mt-2"
@@ -386,11 +391,11 @@ export default function Donate() {
             >
               <div className="text-4xl font-bold text-[var(--brand-primary)] mb-4">$25</div>
                 <div className="text-2xl font-semibold mb-4">→</div>
-                <h3 className="text-xl font-semibold mb-3">Complete Beginner Swim Kit</h3>
+                <h3 className="text-xl font-semibold mb-3">One Child's First Kit</h3>
                 <ul className="text-left text-gray-600 text-sm space-y-2">
-                  <li>✓ Full kit for one child</li>
-                  <li>✓ Covers any missing items</li>
-                  <li>✓ Cleaned and assembled</li>
+                  <li>✓ Goggles, cap & kickboard for one child</li>
+                  <li>✓ Everything needed for day one</li>
+                  <li>✓ Assembled & ready to go</li>
                 </ul>
             </motion.div>
 
@@ -403,11 +408,11 @@ export default function Donate() {
             >
               <div className="text-4xl font-bold text-[var(--brand-primary)] mb-4">$50</div>
                 <div className="text-2xl font-semibold mb-4">→</div>
-                <h3 className="text-xl font-semibold mb-3">Kit + Prep & Transport</h3>
+                <h3 className="text-xl font-semibold mb-3">Kit + Ready to Swim</h3>
                 <ul className="text-left text-gray-600 text-sm space-y-2">
-                  <li>✓ Complete kit funded</li>
-                  <li>✓ Cleaning & sanitization</li>
-                  <li>✓ Transportation support</li>
+                  <li>✓ Full kit covered</li>
+                  <li>✓ Cleaned, sanitized & inspected</li>
+                  <li>✓ Delivered to family's door</li>
                 </ul>
             </motion.div>
 
@@ -420,11 +425,11 @@ export default function Donate() {
             >
               <div className="text-4xl font-bold text-[var(--brand-primary)] mb-4">$100</div>
                 <div className="text-2xl font-semibold mb-4">→</div>
-                <h3 className="text-xl font-semibold mb-3">Community Impact</h3>
+                <h3 className="text-xl font-semibold mb-3">Change a Whole Family</h3>
                 <ul className="text-left text-gray-600 text-sm space-y-2">
-                  <li>✓ Multiple kits prepared</li>
-                  <li>✓ Packing and local delivery run</li>
-                  <li>✓ Helps reach more families at once</li>
+                  <li>✓ Funds 4 kids' kits</li>
+                  <li>✓ Covers transport & logistics</li>
+                  <li>✓ Reaches families without pool access</li>
                 </ul>
             </motion.div>
           </div>
@@ -432,21 +437,6 @@ export default function Donate() {
           <p className="text-center text-sm text-gray-600 mt-8">
             We rely on donated equipment to keep costs low and make kits affordable.
           </p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="mt-12 bg-white rounded-lg shadow-lg p-8"
-          >
-            <h3 className="text-2xl font-bold mb-6">How Your Donation Works</h3>
-            <ul className="space-y-3 text-gray-700 text-sm">
-              <li><span className="font-semibold">Sourced smartly:</span> We rely on donated gear and add only what’s missing.</li>
-              <li><span className="font-semibold">Cleaned for safety:</span> Every kit is inspected, sanitized, and repacked.</li>
-              <li><span className="font-semibold">Delivered locally:</span> Kits reach families through local pickup or delivery runs.</li>
-            </ul>
-          </motion.div>
         </div>
       </section>
 
@@ -487,7 +477,7 @@ export default function Donate() {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <p className="text-gray-600 mb-4">All donated gear is inspected by our coach advisor to ensure safety and usability.</p>
+            <p className="text-gray-600 mb-4">All donated gear is inspected by certified aquatic safety professionals to ensure quality and safety.</p>
             <Link href="/contact#contact-form">
               <Button size="lg" style={{backgroundColor: 'var(--brand-primary)'}}>
               Contact Us to Donate Gear

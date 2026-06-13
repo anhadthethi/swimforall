@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -16,27 +15,12 @@ export default function Contact() {
     subjectOther: "",
     message: ""
   });
-  const [newsletterEmail, setNewsletterEmail] = useState("");
-  const [newsletterStatus, setNewsletterStatus] = useState<"idle" | "success" | "error">("idle");
-  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would integrate with Formspree or similar
     console.log("Contact form submitted:", formData);
     alert("Thank you for your message! We'll get back to you soon.");
-  };
-
-  const handleNewsletterSubmit = async () => {
-    if (!newsletterEmail) {
-      setNewsletterStatus("error");
-      return;
-    }
-    // Replace this with a real newsletter service (e.g., Mailchimp/ConvertKit)
-    console.log("Newsletter subscribe:", newsletterEmail);
-    setNewsletterStatus("success");
-    setNewsletterEmail("");
-    setTimeout(() => setNewsletterStatus("idle"), 2500);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -257,17 +241,15 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="text-center h-full"
+              className="text-center"
             >
-              <div className="bg-white p-8 rounded-lg shadow-sm h-full flex flex-col">
-                <span className="text-4xl mb-4 block">📘</span>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Facebook</h3>
-                <p className="text-gray-600 mb-4">Follow us for updates and community stories.</p>
-                <div className="mt-auto">
-                  <Button variant="outline" style={{borderColor: 'var(--brand-primary)', color: 'var(--brand-primary)'}}>
-                    Follow Us
-                  </Button>
-                </div>
+              <div className="bg-white p-8 rounded-lg shadow-sm">
+                <span className="text-4xl mb-4 block">📷</span>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Instagram</h3>
+                <p className="text-gray-600 mb-4">See our impact through photos and videos.</p>
+                <Button variant="outline" style={{borderColor: 'var(--brand-primary)', color: 'var(--brand-primary)'}}>
+                  Follow Us
+                </Button>
               </div>
             </motion.div>
 
@@ -276,56 +258,15 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="text-center h-full"
+              className="text-center"
             >
-              <div className="bg-white p-8 rounded-lg shadow-sm h-full flex flex-col">
-                <span className="text-4xl mb-4 block">📷</span>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Instagram</h3>
-                <p className="text-gray-600 mb-4">See our impact through photos and videos.</p>
-                <div className="mt-auto">
-                  <Button variant="outline" style={{borderColor: 'var(--brand-primary)', color: 'var(--brand-primary)'}}>
-                    Follow Us
-                  </Button>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="text-center h-full"
-            >
-              <div className="bg-white p-8 rounded-lg shadow-sm h-full flex flex-col">
+              <div className="bg-white p-8 rounded-lg shadow-sm">
                 <span className="text-4xl mb-4 block">📰</span>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Newsletter</h3>
                 <p className="text-gray-600 mb-4">Stay updated with our monthly newsletter.</p>
-                <div className="space-y-3 mt-auto">
-                  <Input
-                    type="email"
-                    placeholder="you@example.com"
-                    value={newsletterEmail}
-                    onChange={(e) => {
-                      setNewsletterEmail(e.target.value);
-                      setNewsletterStatus("idle");
-                    }}
-                  />
-                  <Button
-                    type="button"
-                    variant="outline"
-                    style={{borderColor: 'var(--brand-primary)', color: 'var(--brand-primary)'}}
-                    onClick={handleNewsletterSubmit}
-                  >
-                    Subscribe
-                  </Button>
-                  {newsletterStatus === "success" && (
-                    <p className="text-sm text-green-600">Subscribed! We'll keep you posted.</p>
-                  )}
-                  {newsletterStatus === "error" && (
-                    <p className="text-sm text-red-600">Please enter an email.</p>
-                  )}
-                </div>
+                <Button variant="outline" style={{borderColor: 'var(--brand-primary)', color: 'var(--brand-primary)'}}>
+                  Subscribe
+                </Button>
               </div>
             </motion.div>
           </div>
@@ -355,64 +296,12 @@ export default function Contact() {
                 answer: "Visit our Get a Kit page and fill out the application form. We'll review your application and contact you within 2-3 business days."
               },
               {
-                question: "Is donated equipment safe for children?",
-                answer: (
-                  <>
-                    Yes. All donated gear is carefully inspected, cleaned, and sanitized before being included in a kit. Any items that do not meet safety or quality standards are not used. See how we prep kits on our <Link href="/donate" className="text-blue-600 hover:underline">Donate</Link> page.
-                  </>
-                )
-              },
-              {
-                question: "How are donations used?",
-                answer: (
-                  <>
-                    Monetary donations fund swim kits, cleaning and preparation, and local transportation for distribution. We rely on donated equipment whenever possible to keep costs low and impact high—see the breakdown on <Link href="/donate" className="text-blue-600 hover:underline">Donate</Link>.
-                  </>
-                )
-              },
-              {
-                question: "When will kits be distributed?",
-                answer: (
-                  <>
-                    Kits are distributed during scheduled local distribution periods. Approved applicants will be notified by email with pickup or delivery details—apply on <Link href="/get-kit" className="text-blue-600 hover:underline">Get a Kit</Link>.
-                  </>
-                )
-              },
-              {
-                question: "What areas do you serve?",
-                answer: "We currently serve local families in our community and plan to expand as partnerships and resources grow."
-              },
-              {
-                question: "Who can volunteer?",
-                answer: (
-                  <>
-                    Volunteers may include students, parents, coaches, and community members. Opportunities vary by event and availability—see current roles on <Link href="/volunteer" className="text-blue-600 hover:underline">Volunteer</Link>.
-                  </>
-                )
-              },
-              {
-                question: "Is Swim Access a nonprofit organization?",
-                answer: (
-                  <>
-                    Swim Access is a community-based initiative focused on increasing access to swimming resources. We operate with transparency and reinvest all donations directly into our programs. Learn more on <Link href="/about" className="text-blue-600 hover:underline">About</Link>.
-                  </>
-                )
-              },
-              {
                 question: "What age groups do you serve?",
-                answer: (
-                  <>
-                    We provide free swim kits to children ages 8-12 who meet our eligibility criteria and are ready to begin swimming lessons. Details on <Link href="/get-kit" className="text-blue-600 hover:underline">Get a Kit</Link>.
-                  </>
-                )
+                answer: "We provide free swim kits to children ages 8-12 who meet our eligibility criteria and are ready to begin swimming lessons."
               },
               {
                 question: "How can I donate equipment?",
-                answer: (
-                  <>
-                    Contact us through the form above or visit our <Link href="/donate" className="text-blue-600 hover:underline">Donate</Link> page to learn about equipment donation options and drop-off locations.
-                  </>
-                )
+                answer: "Contact us through the form above or visit our Donate page to learn about equipment donation options and drop-off locations."
               },
               {
                 question: "Do you offer swimming lessons?",
@@ -425,20 +314,10 @@ export default function Contact() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm cursor-pointer"
-                onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
+                className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
-                {openFaqIndex === index && (
-                  <motion.p
-                    className="text-gray-600 mt-2"
-                    initial={{ opacity: 0, y: -6 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    {faq.answer}
-                  </motion.p>
-                )}
+                <p className="text-gray-600">{faq.answer}</p>
               </motion.div>
             ))}
           </div>

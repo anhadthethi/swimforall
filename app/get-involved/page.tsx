@@ -40,9 +40,8 @@ export default function GetInvolved() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { icon: "🎒", title: "Donate Gear", desc: "Give gently used swim equipment", link: "/donate" },
-              { icon: "🤝", title: "Volunteer", desc: "Help with kit assembly and events", link: "#volunteer" },
-              { icon: "📢", title: "Spread the Word", desc: "Share our mission with your network", link: "/spread-the-word" },
-              { icon: "🤝", title: "Partner With Us", desc: "Connect pools and programs", link: "#partner" }
+              { icon: "🧑‍🤝‍🧑", title: "Volunteer", desc: "Help with kit assembly and events", link: "#volunteer" },
+              { icon: "🏢", title: "Partner With Us", desc: "Connect pools and programs", link: "#partner" }
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -52,12 +51,14 @@ export default function GetInvolved() {
                 viewport={{ once: true }}
               >
                 <Card className="h-full text-center">
-                  <CardHeader>
-                    <div className="text-4xl mb-4">{item.icon}</div>
-                    <CardTitle>{item.title}</CardTitle>
+                  <CardHeader className="items-center">
+                    <div className="text-4xl mb-4 flex items-center justify-center" aria-hidden>
+                      {item.icon}
+                    </div>
+                    <CardTitle className="text-center">{item.title}</CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <CardDescription className="mb-4">{item.desc}</CardDescription>
+                  <CardContent className="flex flex-col items-center">
+                    <CardDescription className="mb-4 text-center">{item.desc}</CardDescription>
                     <Button asChild variant="outline" className="w-full">
                       <Link href={item.link}>Learn More</Link>
                     </Button>
@@ -147,8 +148,8 @@ export default function GetInvolved() {
             <p className="text-lg text-gray-600 mb-8">
               Partner with us to help more families access swimming programs in your community.
             </p>
-            <Button asChild size="lg" style={{backgroundColor: 'var(--brand-secondary)'}}>
-              <Link href="/partner">Let's Talk Partnership</Link>
+            <Button size="lg" style={{backgroundColor: 'var(--brand-secondary)'}}>
+              Let's Talk Partnership
             </Button>
           </motion.div>
         </div>

@@ -24,9 +24,6 @@ export default function Navigation() {
               <Link href="/donate" className="text-gray-700 hover:text-[var(--brand-primary)] px-3 py-2 rounded-md text-sm font-medium">
                 Donate
               </Link>
-              <Link href="/get-involved" className="text-gray-700 hover:text-[var(--brand-primary)] px-3 py-2 rounded-md text-sm font-medium">
-                Get Involved
-              </Link>
               <Link href="/contact" className="text-gray-700 hover:text-[var(--brand-primary)] px-3 py-2 rounded-md text-sm font-medium">
                 Contact
               </Link>

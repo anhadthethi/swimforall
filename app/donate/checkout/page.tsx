@@ -10,9 +10,9 @@ const stripePromise = typeof window !== "undefined" && process.env.NEXT_PUBLIC_S
   : null;
 
 const presetAmounts = [
-  { amount: 25, label: "$25", desc: "One complete beginner swim kit" },
-  { amount: 50, label: "$50", desc: "Kit plus cleaning and transport" },
-  { amount: 100, label: "$100", desc: "Multiple kits and delivery run" },
+  { amount: 25, label: "$25", desc: "One Child's First Kit" },
+  { amount: 50, label: "$50", desc: "Kit + Ready to Swim" },
+  { amount: 100, label: "$100", desc: "Change a Whole Family" },
 ];
 
 export default function DonateCheckoutPage() {
@@ -246,14 +246,14 @@ export default function DonateCheckoutPage() {
           <div className="bg-white rounded-lg shadow-lg p-6 space-y-4">
             <h3 className="text-xl font-semibold text-gray-900">How your donation is used</h3>
             <ul className="space-y-3 text-sm text-gray-700">
-              <li><span className="font-semibold">Swim Kits:</span> Beginner kits (goggles, cap, kickboard, fins, towel) for kids 8–12.</li>
+              <li><span className="font-semibold">Swim Kits:</span> Beginner kits (goggles, cap, kickboard, towel, stickers) for kids 8–12.</li>
               <li><span className="font-semibold">Cleaning & Preparation:</span> Inspection, sanitization, and safe repackaging.</li>
               <li><span className="font-semibold">Local Transportation:</span> Getting kits to families, pools, or pickup spots without added cost.</li>
             </ul>
             <div className="border-t border-gray-200 pt-4 space-y-2 text-sm text-gray-700">
-              <p><span className="font-semibold">$25</span> funds one complete beginner kit.</p>
-              <p><span className="font-semibold">$50</span> funds a kit plus cleaning, prep, and transport.</p>
-              <p><span className="font-semibold">$100</span> supports multiple kits and a local delivery run.</p>
+              <p><span className="font-semibold">$25</span> funds one child's first kit and day-one essentials.</p>
+              <p><span className="font-semibold">$50</span> funds a full kit, sanitization, and delivery support.</p>
+              <p><span className="font-semibold">$100</span> helps fund multiple kits and reach whole families.</p>
             </div>
             <div className="border-t border-gray-200 pt-4 text-sm text-gray-600">
               Have gear to donate instead? <button className="text-blue-600 hover:underline" onClick={() => router.push("/donate#donate-gear")}>Donate equipment</button>.

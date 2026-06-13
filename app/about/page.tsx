@@ -60,10 +60,13 @@ export default function About() {
                 <h2 className="text-3xl font-bold mb-6">From the Founder</h2>
                 <blockquote className="border-l-4 border-[var(--brand-primary)] pl-6 py-4">
                   <p className="text-xl text-gray-700 leading-relaxed mb-4">
-                    "I grew up in swimming. I saw how quickly costs added up—and how many kids never even got the chance to start. A pair of goggles. A kickboard. A cap. These small things cost money families often don't have. But these things are the difference between a child learning a life-saving skill and sitting on the sidelines."
+                    "The first time I stood on a pool deck, I knew swimming would change my life. What I didn't know then was how many kids never get that moment — not because they don't want it, but because a $12 pair of goggles stands in the way."
+                  </p>
+                  <p className="text-xl text-gray-700 leading-relaxed mb-4">
+                    "I've seen it firsthand: a child showing up to their first lesson without a cap, without goggles, borrowing equipment that doesn't fit — already behind before they even touch the water. That image never left me."
                   </p>
                   <p className="text-xl text-gray-700 leading-relaxed">
-                    "Swim Access exists to make sure equipment isn't the reason a child stays on the sidelines. We remove the barrier so families can focus on what matters: getting their child into the water."
+                    "Swim Access exists because no child should miss out on a life-saving skill over something we can fix together. Every kit we send is a door opening for a family that was told swimming wasn't for them. I started this because I believe it is — for every kid, in every zip code."
                   </p>
                 </blockquote>
               </div>
@@ -121,6 +124,13 @@ export default function About() {
                   <div>
                     <h3 className="font-semibold text-lg mb-2">Cost Barriers</h3>
                     <p className="text-gray-600">The average cost of swim lessons and equipment can be prohibitive for many families.</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-purple-600 text-white rounded-full flex items-center justify-center text-lg mr-4 flex-shrink-0">🧠</div>
+                  <div>
+                    <h3 className="font-semibold text-lg mb-2">Mental Health &amp; Wellbeing</h3>
+                    <p className="text-gray-600">Swimming reduces anxiety, stress, and symptoms of depression — giving kids a healthy outlet that benefits them long after they leave the water.</p>
                   </div>
                 </div>
               </div>
