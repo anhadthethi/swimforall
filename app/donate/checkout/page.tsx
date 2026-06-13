@@ -1,7 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 import { loadStripe } from "@stripe/stripe-js";
 import { Button } from "@/components/ui/button";
 
@@ -16,9 +16,8 @@ const presetAmounts = [
 ];
 
 export default function DonateCheckoutPage() {
-  const searchParams = useSearchParams();
   const router = useRouter();
-  const canceled = searchParams?.get("canceled");
+  const [canceled, setCanceled] = useState<string | null>(null);
 
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
   const [customAmount, setCustomAmount] = useState("");
@@ -29,6 +28,11 @@ export default function DonateCheckoutPage() {
   const [updates, setUpdates] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setCanceled(params.get("canceled"));
+  }, []);
 
   const activeAmount = useMemo(() => {
     if (customAmount) {

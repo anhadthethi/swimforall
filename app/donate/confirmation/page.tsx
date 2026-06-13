@@ -3,16 +3,19 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { useSearchParams } from "next/navigation";
 
 export default function DonationConfirmationPage() {
   const [showToast, setShowToast] = useState(true);
-  const searchParams = useSearchParams();
-  const sessionId = searchParams?.get("session_id");
+  const [sessionId, setSessionId] = useState<string | null>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => setShowToast(false), 3000);
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setSessionId(params.get("session_id"));
   }, []);
 
   return (
