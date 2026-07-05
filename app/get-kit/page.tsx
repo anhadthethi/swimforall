@@ -46,14 +46,20 @@ export default function GetKit() {
     setIsSubmitting(true);
     
     try {
-      // TODO: Integrate with Formspree or backend service
-      // For now, log to console and redirect
-      console.log("Kit application submitted:", formData);
-      
-      // Redirect to confirmation page
-      setTimeout(() => {
-        router.push("/kit-request-confirmation");
-      }, 300);
+      const response = await fetch("/api/kit-request", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data?.error || "Unable to submit your application right now.");
+      }
+
+      router.push("/kit-request-confirmation");
     } catch (error) {
       console.error("Error submitting form:", error);
       alert("There was an error submitting your application. Please try again.");
