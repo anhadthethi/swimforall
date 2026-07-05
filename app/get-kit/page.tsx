@@ -393,7 +393,7 @@ export default function GetKit() {
               Each kit contains everything your child needs to start their swimming journey.
             </p>
             <p className="text-sm text-gray-500 mt-4">
-              Optional add-in when requested by the customer: small transportation support to help families reach the pool.
+              Kits include swim essentials and a getting-started guide.
             </p>
           </motion.div>
 

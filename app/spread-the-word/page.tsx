@@ -6,12 +6,12 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 const templates = {
-  instagram: "Swim Access is helping remove financial barriers to swimming by providing free beginner swim kits to kids. One kit can make a real difference. 🏊‍♀️\n\nLearn more and support local families: [Your Site Link]",
-  twitter: "Free swim kits for local kids. Swim Access removes cost barriers and helps families get started with swimming safely. Support the mission: [Your Site Link]",
-  text: "Hey! Check out Swim Access — they provide free swim kits to help kids learn to swim. It's a local nonprofit doing amazing work. [Your Site Link]",
+  instagram: "Swim for all is helping remove financial barriers to swimming by providing free beginner swim kits to kids. One kit can make a real difference. 🏊‍♀️\n\nLearn more and support local families: [Your Site Link]",
+  twitter: "Free swim kits for local kids. Swim for all removes cost barriers and helps families get started with swimming safely. Support the mission: [Your Site Link]",
+  text: "Hey! Check out Swim for all — they provide free swim kits to help kids learn to swim. It's a local nonprofit doing amazing work. [Your Site Link]",
   email: `Hi!
 
-I wanted to share Swim Access, a local nonprofit providing free swim kits to help kids learn to swim safely. They rely on community support—whether donations, gear, or just spreading the word—to reach families who need it most.
+I wanted to share Swim for all, a local nonprofit providing free swim kits to help kids learn to swim safely. They rely on community support—whether donations, gear, or just spreading the word—to reach families who need it most.
 
 I thought this could be something our team/club/school would want to support or learn about.
 
@@ -49,7 +49,7 @@ export default function SpreadTheWordPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Sharing Swim Access helps families discover free swim kits and lifesaving opportunities in their community.
+            Sharing Swim for all helps families discover free swim kits and lifesaving opportunities in their community.
           </motion.p>
         </div>
       </section>
@@ -228,7 +228,7 @@ export default function SpreadTheWordPage() {
               Every share helps us reach families who may not know help exists.
             </p>
             <p className="text-sm text-gray-600 mt-2">
-              Thank you for being part of the Swim Access community.
+              Thank you for being part of the Swim for all community.
             </p>
           </motion.div>
         </div>

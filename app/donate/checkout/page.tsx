@@ -56,11 +56,6 @@ export default function DonateCheckoutPage() {
       return;
     }
 
-    if (!stripePromise) {
-      setError("Stripe is not configured. Add NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY.");
-      return;
-    }
-
     setSubmitting(true);
     try {
       const res = await fetch("/api/create-checkout-session", {
@@ -82,18 +77,18 @@ export default function DonateCheckoutPage() {
       }
 
       const data = await res.json();
-      const stripe = await stripePromise;
-      if (!stripe) {
-        throw new Error("Stripe failed to initialize.");
-      }
-
       const { sessionId, url } = data;
-      // Prefer redirectToCheckout when sessionId is available
-      if (sessionId) {
+
+      // Prefer server-provided Stripe URL. If unavailable, fallback to Stripe.js redirect.
+      if (url) {
+        window.location.href = url;
+      } else if (sessionId && stripePromise) {
+        const stripe = await stripePromise;
+        if (!stripe) {
+          throw new Error("Stripe failed to initialize.");
+        }
         const { error: stripeError } = await stripe.redirectToCheckout({ sessionId });
         if (stripeError) throw new Error(stripeError.message);
-      } else if (url) {
-        window.location.href = url;
       } else {
         throw new Error("Missing checkout session.");
       }
@@ -109,7 +104,7 @@ export default function DonateCheckoutPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Secure Donation Checkout</h1>
           <p className="text-lg md:text-xl opacity-90">
-            Your donation funds beginner swim kits, preparation, and local delivery.
+            Your donation funds beginner swim kits, preparation, and program support.
           </p>
         </div>
       </header>
@@ -122,7 +117,7 @@ export default function DonateCheckoutPage() {
                 <div>
                   <p className="text-sm text-gray-500">Donation</p>
                   <h2 className="text-2xl font-bold text-gray-900">{activeAmount ? `$${activeAmount}` : "Select an amount"}</h2>
-                  <p className="text-sm text-gray-600">Funds swim kits and local delivery</p>
+                  <p className="text-sm text-gray-600">Funds swim kits and program support</p>
                 </div>
                 <Button variant="ghost" onClick={() => { setSelectedAmount(null); setCustomAmount(""); }}>
                   Change amount
@@ -252,11 +247,11 @@ export default function DonateCheckoutPage() {
             <ul className="space-y-3 text-sm text-gray-700">
               <li><span className="font-semibold">Swim Kits:</span> Beginner kits (goggles, cap, kickboard, towel, stickers) for kids 8–12.</li>
               <li><span className="font-semibold">Cleaning & Preparation:</span> Inspection, sanitization, and safe repackaging.</li>
-              <li><span className="font-semibold">Local Transportation:</span> Getting kits to families, pools, or pickup spots without added cost.</li>
+              <li><span className="font-semibold">Program Operations:</span> Basic supplies, coordination, and community support work.</li>
             </ul>
             <div className="border-t border-gray-200 pt-4 space-y-2 text-sm text-gray-700">
               <p><span className="font-semibold">$25</span> funds one child's first kit and day-one essentials.</p>
-              <p><span className="font-semibold">$50</span> funds a full kit, sanitization, and delivery support.</p>
+              <p><span className="font-semibold">$50</span> funds a full kit and sanitization support.</p>
               <p><span className="font-semibold">$100</span> helps fund multiple kits and reach whole families.</p>
             </div>
             <div className="border-t border-gray-200 pt-4 text-sm text-gray-600">

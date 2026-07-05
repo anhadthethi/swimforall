@@ -42,7 +42,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-lg font-semibold mb-4">Swim Access</h3>
+              <h3 className="text-lg font-semibold mb-4">Swim for all</h3>
               <p className="text-slate-300">
                 Removing barriers to swimming access, one kit at a time.
               </p>
@@ -60,7 +60,6 @@ export default function Footer() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Connect</h3>
               <div className="flex space-x-4">
-                <a href="#" className="text-slate-300 hover:text-white">Facebook</a>
                 <a href="#" className="text-slate-300 hover:text-white">Instagram</a>
               </div>
               <div className="mt-4">
@@ -86,7 +85,7 @@ export default function Footer() {
           </div>
           <div className="border-t border-slate-700 mt-8 pt-8 text-center">
             <p className="text-slate-300">
-              &copy; 2026 Swim Access. All rights reserved.{" "}
+              &copy; 2026 Swim for all. All rights reserved.{" "}
               <span className="mx-2">|</span>
               <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>
               <span className="mx-2">|</span>

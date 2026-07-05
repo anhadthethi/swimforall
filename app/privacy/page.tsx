@@ -38,7 +38,7 @@ export default function Privacy() {
             className="prose prose-lg max-w-none"
           >
             <p className="text-xl text-gray-600 mb-8">
-              At Swim Access, we take your privacy seriously. This policy explains what information we collect, 
+              At Swim for all, we take your privacy seriously. This policy explains what information we collect, 
               why we collect it, and how we protect it.
             </p>
 
@@ -52,7 +52,7 @@ export default function Privacy() {
                 <ul className="list-disc pl-6 text-gray-700 space-y-2">
                   <li>Parent/guardian name</li>
                   <li>Email address and phone number</li>
-                  <li>Mailing address (for kit delivery)</li>
+                  <li>Mailing address (for kit fulfillment)</li>
                   <li>Child's name and age</li>
                   <li>Responses to application questions</li>
                 </ul>
@@ -90,7 +90,7 @@ export default function Privacy() {
                 </p>
                 <ul className="list-disc pl-6 text-gray-700 space-y-2">
                   <li>Application status updates</li>
-                  <li>Kit delivery information</li>
+                  <li>Kit fulfillment information</li>
                   <li>Occasional newsletters with impact stories and resources (1-2 times per month, maximum)</li>
                 </ul>
                 <p className="text-gray-700 mt-4">
@@ -103,7 +103,7 @@ export default function Privacy() {
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Data Security</h2>
                 <p className="text-gray-700">
-                  Your information is stored securely and access is limited to Swim Access organizers and trusted 
+                  Your information is stored securely and access is limited to Swim for all organizers and trusted 
                   advisors who help us run the program. We use industry-standard security practices to protect your data.
                 </p>
               </div>

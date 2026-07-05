@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 export default function Navigation() {
@@ -8,15 +9,23 @@ export default function Navigation() {
     <nav className="sticky top-0 z-50 bg-white shadow-sm border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0">
-            <Link href="/" className="text-2xl font-bold text-[var(--brand-primary)]">
-              Swim Access
-            </Link>
-          </div>
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              <Link href="/about" className="text-gray-700 hover:text-[var(--brand-primary)] px-3 py-2 rounded-md text-sm font-medium">
-                About
+          <div className="flex items-center">
+            <div className="flex-shrink-0">
+              <Link href="/" className="block" aria-label="Swim for all Home">
+                <Image
+                  src="/images/swim-for-all-logo-nav.png"
+                  alt="Swim for all"
+                  width={220}
+                  height={67}
+                  className="h-12 w-auto"
+                  priority
+                />
+              </Link>
+            </div>
+            <div className="hidden md:block">
+              <div className="ml-2 flex items-baseline space-x-4">
+              <Link href="/" className="text-gray-700 hover:text-[var(--brand-primary)] px-3 py-2 rounded-md text-sm font-medium">
+                Home
               </Link>
               <Link href="/get-kit" className="text-gray-700 hover:text-[var(--brand-primary)] px-3 py-2 rounded-md text-sm font-medium">
                 Get a Kit
@@ -24,9 +33,13 @@ export default function Navigation() {
               <Link href="/donate" className="text-gray-700 hover:text-[var(--brand-primary)] px-3 py-2 rounded-md text-sm font-medium">
                 Donate
               </Link>
+              <Link href="/about" className="text-gray-700 hover:text-[var(--brand-primary)] px-3 py-2 rounded-md text-sm font-medium">
+                About
+              </Link>
               <Link href="/contact" className="text-gray-700 hover:text-[var(--brand-primary)] px-3 py-2 rounded-md text-sm font-medium">
                 Contact
               </Link>
+              </div>
             </div>
           </div>
           <div className="hidden md:block">

@@ -1,4 +1,4 @@
-# Swim Access - Youth Swimming Access Nonprofit
+# Swim for all - Youth Swimming Access Nonprofit
 
 A modern, responsive website for a nonprofit organization that provides free swim equipment kits to children ages 8-12, removing financial barriers to swimming lessons and water safety education.
 
@@ -45,6 +45,23 @@ A modern, responsive website for a nonprofit organization that provides free swi
    ```
 
 3. **Open your browser** to [http://localhost:3000](http://localhost:3000)
+
+## Stripe Setup
+
+Add these variables in `.env.local` and Vercel:
+
+- `STRIPE_SECRET_KEY`
+- `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`
+- `STRIPE_WEBHOOK_SECRET`
+
+Local webhook testing flow:
+
+1. Authenticate CLI: `stripe login`
+2. Forward events to local route: `stripe listen --forward-to localhost:3000/api/stripe/webhook`
+3. Copy the generated signing secret into `STRIPE_WEBHOOK_SECRET`
+4. Trigger a test event: `stripe trigger checkout.session.completed`
+
+Webhook endpoint implemented at `/api/stripe/webhook` and handles `checkout.session.completed`.
 
 ## Project Structure
 
@@ -116,7 +133,7 @@ The site now features real images strategically placed for maximum emotional imp
 - **Icons**: Color-coded emojis (🛟 blue lifesaver, 📊 teal chart, 💰 orange money) replacing red exclamation marks
 
 #### **About Page - Bridge Model Section** ✅
-- **Purpose**: Differentiates Swim Access from traditional programs without sounding critical
+- **Purpose**: Differentiates Swim for all from traditional programs without sounding critical
 - **Layout**: Two-column comparison (Traditional Programs vs Our Bridge Model)
 - **Tone**: Partnership-friendly, acknowledges traditional programs are valuable
 - **Colors**: Gray for traditional (neutral), blue for bridge model (confident)
@@ -166,14 +183,14 @@ The site now includes strategic elements for maximum credibility:
 - **Urgency Indicators**: "We're currently preparing kits for our next local distribution!"
 - **Human Response Time**: "We usually respond within 24 hours."
 - **Impact Breakdown**: Clear visualization of donation impact ($25 = 1 kit, $50 = kit + guidance, $100 = distribution event)
-- **Bridge Model Differentiation**: Positions Swim Access as additive, not competitive with traditional programs
+- **Bridge Model Differentiation**: Positions Swim for all as additive, not competitive with traditional programs
 - **Form UX Improvements**: Reassurance line, gentle question phrasing, optional email checkbox (unchecked by default)
 - **Confirmation Page**: Clear 3-step timeline after form submission (Review → Email → Get Kit & Start Swimming)
 
 ## Trust & Legal Pages
 Professional privacy and terms pages build parent trust:
 - **Privacy Policy** (`/privacy`): Clear data handling, email communication, children's privacy protection
-- **Terms of Service** (`/terms`): Program scope, safety disclaimer, eligibility, what Swim Access provides vs. doesn't
+- **Terms of Service** (`/terms`): Program scope, safety disclaimer, eligibility, what Swim for all provides vs. doesn't
 - **Newsletter Messaging**: Footer includes "Occasional updates, impact stories, no spam" to set expectations
 - **Footer Links**: Privacy and Terms linked in footer for easy access
 - **Tone**: Human, reassuring, non-defensive—builds trust without sounding legal-heavy

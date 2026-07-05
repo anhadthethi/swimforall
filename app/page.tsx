@@ -24,7 +24,7 @@ export default function Home() {
           className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white"
         >
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Swim Access for Every Child
+            Swim for all for Every Child
           </h1>
           <p className="text-xl md:text-2xl mb-4 opacity-95 leading-relaxed">
             We remove the upfront costs that keep kids out of lessons by providing swim gear kits

@@ -34,7 +34,7 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p className="text-2xl leading-relaxed text-gray-700 mb-8">
-              Swim Access was founded on the belief that every child deserves the opportunity to learn to swim, 
+              Swim for all was founded on the belief that every child deserves the opportunity to learn to swim, 
               regardless of their family's financial situation. We provide free swim equipment kits and personalized 
               guidance to families who face barriers to accessing swimming lessons and water safety education.
             </p>
@@ -66,7 +66,7 @@ export default function About() {
                     "I've seen it firsthand: a child showing up to their first lesson without a cap, without goggles, borrowing equipment that doesn't fit — already behind before they even touch the water. That image never left me."
                   </p>
                   <p className="text-xl text-gray-700 leading-relaxed">
-                    "Swim Access exists because no child should miss out on a life-saving skill over something we can fix together. Every kit we send is a door opening for a family that was told swimming wasn't for them. I started this because I believe it is — for every kid, in every zip code."
+                    "Swim for all exists because no child should miss out on a life-saving skill over something we can fix together. Every kit we send is a door opening for a family that was told swimming wasn't for them. I started this because I believe it is — for every kid, in every zip code."
                   </p>
                 </blockquote>
               </div>

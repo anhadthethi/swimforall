@@ -163,7 +163,7 @@ export default function KitRequestConfirmation() {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">You're in Good Hands</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
               We know this is an important decision for your family. We're committed to making this process simple, transparent, 
-              and supportive. You won't be left guessing—we'll keep you informed every step of the way. That's what Swim Access is all about.
+              and supportive. You won't be left guessing—we'll keep you informed every step of the way. That's what Swim for all is all about.
             </p>
           </motion.div>
         </div>

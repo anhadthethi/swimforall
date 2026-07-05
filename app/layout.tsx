@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Swim Access - Removing Barriers to Swimming",
+  title: "Swim for all - Removing Barriers to Swimming",
   description: "We provide free swim equipment kits to children ages 8-12, removing financial and access barriers to swimming lessons and water safety.",
 };
 

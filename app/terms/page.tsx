@@ -38,7 +38,7 @@ export default function Terms() {
             className="prose prose-lg max-w-none"
           >
             <p className="text-xl text-gray-600 mb-8">
-              By using the Swim Access website and applying for a kit, you agree to these terms. 
+              By using the Swim for all website and applying for a kit, you agree to these terms. 
               We've kept them simple and straightforward—here's how our program works.
             </p>
 
@@ -59,9 +59,9 @@ export default function Terms() {
 
               {/* Program Scope */}
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">What Swim Access Provides</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">What Swim for all Provides</h2>
                 <p className="text-gray-700 mb-4">
-                  Swim Access is a connector, not a swim school. Here's what we do—and what we don't:
+                  Swim for all is a connector, not a swim school. Here's what we do—and what we don't:
                 </p>
                 <div className="bg-green-50 p-6 rounded-lg mb-4">
                   <h3 className="font-semibold text-green-900 mb-2">✓ What We Provide</h3>
@@ -105,7 +105,7 @@ export default function Terms() {
                 <ul className="list-disc pl-6 text-gray-700 space-y-2">
                   <li>Participation in swim lessons and water activities is at the family's own discretion and risk</li>
                   <li>Families are responsible for choosing qualified instructors and safe swimming environments</li>
-                  <li>Swim Access is not liable for injuries, accidents, or issues that occur during lessons or water activities</li>
+                  <li>Swim for all is not liable for injuries, accidents, or issues that occur during lessons or water activities</li>
                   <li>Equipment is provided "as-is" and should be inspected by families before use</li>
                 </ul>
                 <p className="text-gray-700 mt-4">

@@ -181,7 +181,7 @@ export default function Contact() {
                       <span className="text-2xl">📧</span>
                     </div>
                     <div className="ml-3">
-                      <p className="text-gray-600">info@swimaccess.org</p>
+                      <p className="text-gray-600">anhad.thethi@gmail.com</p>
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -189,7 +189,7 @@ export default function Contact() {
                       <span className="text-2xl">📞</span>
                     </div>
                     <div className="ml-3">
-                      <p className="text-gray-600">(555) 123-SWIM</p>
+                      <p className="text-gray-600">(646) 469-3000</p>
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -198,8 +198,8 @@ export default function Contact() {
                     </div>
                     <div className="ml-3">
                       <p className="text-gray-600">
-                        123 Water Street<br />
-                        Swim City, SC 12345
+                        15 Westgate Rd<br />
+                        Livingston, NJ 07039
                       </p>
                     </div>
                   </div>

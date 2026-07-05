@@ -13,8 +13,8 @@ export default function Donate() {
 
   const donationAmounts = [
     { amount: 25, description: "One Child's First Kit: goggles, cap & kickboard for day one" },
-    { amount: 50, description: "Kit + Ready to Swim: full kit, sanitized and delivered" },
-    { amount: 100, description: "Change a Whole Family: funds 4 kids' kits plus logistics" }
+    { amount: 50, description: "Kit + Ready to Swim: full kit, sanitized and prepared" },
+    { amount: 100, description: "Change a Whole Family: funds 4 kids' kits plus outreach support" }
   ];
 
   const handleAmountSelect = (amount: number) => {
@@ -324,7 +324,7 @@ export default function Donate() {
                 <CardTitle className="text-2xl">Make a Financial Contribution</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-gray-700">Your donation directly funds beginner swim kits, preparation, and local delivery.</p>
+                <p className="text-gray-700">Your donation directly funds beginner swim kits, preparation, and program support.</p>
                 <div className="space-y-2 flex flex-col items-center">
                   <Button
                     asChild
@@ -333,7 +333,7 @@ export default function Donate() {
                   >
                     <Link href="/donate/checkout">Donate Now</Link>
                   </Button>
-                  <p className="text-sm text-gray-600">Secure checkout. 100% of donations support Swim Access programs.</p>
+                  <p className="text-sm text-gray-600">Secure checkout. 100% of donations support Swim for all programs.</p>
                 </div>
               </CardContent>
             </Card>
@@ -412,7 +412,7 @@ export default function Donate() {
                 <ul className="text-left text-gray-600 text-sm space-y-2">
                   <li>✓ Full kit covered</li>
                   <li>✓ Cleaned, sanitized & inspected</li>
-                  <li>✓ Delivered to family's door</li>
+                  <li>✓ Supports kit prep and family guidance</li>
                 </ul>
             </motion.div>
 
@@ -428,8 +428,8 @@ export default function Donate() {
                 <h3 className="text-xl font-semibold mb-3">Change a Whole Family</h3>
                 <ul className="text-left text-gray-600 text-sm space-y-2">
                   <li>✓ Funds 4 kids' kits</li>
-                  <li>✓ Covers transport & logistics</li>
-                  <li>✓ Reaches families without pool access</li>
+                  <li>✓ Expands local outreach and operations</li>
+                  <li>✓ Helps more families get started</li>
                 </ul>
             </motion.div>
           </div>

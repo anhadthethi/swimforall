@@ -89,8 +89,8 @@ export async function POST(req: Request) {
           price_data: {
             currency: "usd",
             product_data: {
-              name: "Swim Access Donation",
-              description: "Supports swim kits, preparation, and local delivery",
+              name: "Swim for all Donation",
+              description: "Supports swim kits, preparation, and program operations",
             },
             unit_amount: amountInCents,
           },

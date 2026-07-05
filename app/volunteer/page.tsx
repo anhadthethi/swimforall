@@ -53,7 +53,7 @@ export default function VolunteerPage() {
             initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
           >
-            Volunteer with Swim Access
+            Volunteer with Swim for all
           </motion.h1>
           <motion.p
             className="text-xl max-w-3xl mx-auto"

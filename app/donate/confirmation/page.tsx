@@ -31,7 +31,7 @@ export default function DonationConfirmationPage() {
 
       <header className="bg-gradient-to-r from-blue-600 to-teal-500 text-white py-14">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-3">Thank you for supporting Swim Access</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-3">Thank you for supporting Swim for all</h1>
           <p className="text-lg md:text-xl opacity-90">Your donation has been processed successfully.</p>
         </div>
       </header>
@@ -58,8 +58,8 @@ export default function DonationConfirmationPage() {
                 <p className="text-sm text-gray-700">Each kit is inspected, sanitized, and packed safely.</p>
               </div>
               <div className="p-4 rounded-lg border border-gray-200 bg-gray-50">
-                <h3 className="font-semibold text-gray-900 mb-1">Delivered locally</h3>
-                <p className="text-sm text-gray-700">Kits reach families through local delivery or pickup runs.</p>
+                <h3 className="font-semibold text-gray-900 mb-1">Program support</h3>
+                <p className="text-sm text-gray-700">Your gift helps us prepare and distribute kits through trusted local partners.</p>
               </div>
             </div>
 

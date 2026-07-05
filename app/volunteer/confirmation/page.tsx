@@ -43,7 +43,7 @@ export default function VolunteerConfirmation() {
                 You're All Set!
               </h1>
               <p className="text-xl text-gray-600 mb-8">
-                Thanks for signing up to volunteer with Swim Access. We'll reach out when opportunities are available.
+                Thanks for signing up to volunteer with Swim for all. We'll reach out when opportunities are available.
               </p>
 
               <div className="bg-blue-50 rounded-lg p-6 mb-8 text-left">

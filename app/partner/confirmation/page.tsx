@@ -37,7 +37,7 @@ export default function PartnerConfirmation() {
               <div className="text-6xl mb-6">🤝</div>
               <h1 className="text-4xl font-bold text-gray-900 mb-4">Partner interest received</h1>
               <p className="text-lg text-gray-600 mb-8">
-                Thank you for your interest in partnering with Swim Access. We'll follow up to discuss logistics and next steps.
+                Thank you for your interest in partnering with Swim for all. We'll follow up to discuss logistics and next steps.
               </p>
 
               <div className="bg-blue-50 rounded-lg p-6 mb-8 text-left">
