@@ -34,13 +34,26 @@ export default function VolunteerPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch("/api/volunteer", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    console.log("Volunteer sign-up:", formData);
-    
-    setIsSubmitting(false);
-    router.push("/volunteer/confirmation");
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data?.error || "Unable to submit volunteer form right now.");
+      }
+
+      router.push("/volunteer/confirmation");
+    } catch (error) {
+      console.error("Volunteer form submit error", error);
+      alert("There was an error submitting your volunteer form. Please try again.");
+      setIsSubmitting(false);
+    }
   };
 
   return (

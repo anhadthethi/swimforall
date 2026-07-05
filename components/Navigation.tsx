@@ -24,22 +24,28 @@ export default function Navigation() {
             </div>
           </div>
           <div className="hidden md:flex items-center justify-center gap-2">
-            <Link href="/" className="text-gray-700 hover:text-[var(--brand-primary)] px-3 py-2 rounded-md text-sm font-medium">
+            <Link href="/" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-4 py-2 rounded-t-lg text-sm font-medium border-b-2 border-transparent hover:border-[var(--brand-primary)] transition-all">
                 Home
             </Link>
-            <Link href="/get-kit" className="text-gray-700 hover:text-[var(--brand-primary)] px-3 py-2 rounded-md text-sm font-medium">
+            <Link href="/mission" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-4 py-2 rounded-t-lg text-sm font-medium border-b-2 border-transparent hover:border-[var(--brand-primary)] transition-all">
+              Mission
+            </Link>
+            <Link href="/get-kit" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-4 py-2 rounded-t-lg text-sm font-medium border-b-2 border-transparent hover:border-[var(--brand-primary)] transition-all">
                 Get a Kit
             </Link>
-            <Link href="/donate" className="text-gray-700 hover:text-[var(--brand-primary)] px-3 py-2 rounded-md text-sm font-medium">
+            <Link href="/donate" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-4 py-2 rounded-t-lg text-sm font-medium border-b-2 border-transparent hover:border-[var(--brand-primary)] transition-all">
                 Donate
             </Link>
-            <Link href="/about" className="text-gray-700 hover:text-[var(--brand-primary)] px-3 py-2 rounded-md text-sm font-medium">
+            <Link href="/volunteer" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-4 py-2 rounded-t-lg text-sm font-medium border-b-2 border-transparent hover:border-[var(--brand-primary)] transition-all">
+              Volunteer
+            </Link>
+            <Link href="/about" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-4 py-2 rounded-t-lg text-sm font-medium border-b-2 border-transparent hover:border-[var(--brand-primary)] transition-all">
                 About
             </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-[var(--brand-primary)] px-3 py-2 rounded-md text-sm font-medium">
+            <Link href="/contact" className="bg-gray-100 text-gray-700 hover:bg-gray-200 px-4 py-2 rounded-t-lg text-sm font-medium border-b-2 border-transparent hover:border-[var(--brand-primary)] transition-all">
                 Contact
             </Link>
-            <Button asChild style={{ backgroundColor: "var(--brand-accent)" }}>
+            <Button asChild size="lg" className="px-6 py-2 font-bold shadow-lg hover:shadow-xl transition-shadow ml-2" style={{ backgroundColor: "var(--brand-accent)" }}>
               <Link href="/donate">Donate Now</Link>
             </Button>
           </div>
