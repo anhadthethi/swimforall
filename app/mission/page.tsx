@@ -1,24 +1,36 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function MissionPage() {
   return (
     <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-600 to-teal-500 text-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.h1
+            className="text-4xl md:text-5xl font-bold mb-4"
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+          >
+            Our Mission
+          </motion.h1>
+          <motion.p
+            className="text-lg md:text-xl max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Removing barriers so every child can learn to swim with confidence.
+          </motion.p>
+        </div>
+      </section>
+
       {/* The Gap */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 1 }}
-            animate={{ opacity: 1 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl font-bold mb-6">The Gap We Close</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Swimming saves lives. The biggest barrier is cost—families can’t afford the gear to start lessons.
-            </p>
-          </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -27,7 +39,7 @@ export default function MissionPage() {
               viewport={{ once: true }}
               className="bg-white p-8 rounded-lg shadow-sm"
             >
-              <div className="text-3xl font-bold text-[var(--brand-primary)] mb-3">Safety First</div>
+              <div className="text-3xl font-bold text-[var(--brand-primary)] mb-3">Why Swim ?</div>
               <p className="text-gray-700 text-lg">Swimming is a life‑saving skill. Access should be simple and affordable.</p>
             </motion.div>
 
@@ -38,8 +50,8 @@ export default function MissionPage() {
               viewport={{ once: true }}
               className="bg-white p-8 rounded-lg shadow-sm"
             >
-              <div className="text-3xl font-bold text-[var(--brand-primary)] mb-3">Upfront Costs</div>
-              <p className="text-gray-700 text-lg">Gear and fees add up fast and stop families before they start.</p>
+              <div className="text-3xl font-bold text-[var(--brand-primary)] mb-3">Challange</div>
+              <p className="text-gray-700 text-lg">The biggest barrier is cost—families can’t afford the gear to start lessons.</p>
             </motion.div>
 
             <motion.div
@@ -81,7 +93,7 @@ export default function MissionPage() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="inline-block w-16 h-16 bg-[var(--brand-primary)] text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">
+                <div className="mx-auto w-16 h-16 bg-[var(--brand-primary)] text-white rounded-full grid place-items-center text-2xl font-bold leading-none mb-4">
                   {step.number}
                 </div>
                 <h3 className="text-2xl font-bold mb-2">{step.title}</h3>
@@ -97,7 +109,10 @@ export default function MissionPage() {
             viewport={{ once: true }}
             className="text-center text-gray-600 max-w-3xl mx-auto"
           >
-            <p className="text-lg">That’s it. Choose how you want to help—or get help.</p>
+            <p className="text-lg mb-4">That’s it. Click here to Apply</p>
+            <Button asChild style={{ backgroundColor: "var(--brand-accent)" }}>
+              <Link href="/get-kit/request">Apply for a Kit</Link>
+            </Button>
           </motion.div>
         </div>
       </section>
