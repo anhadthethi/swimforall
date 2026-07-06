@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     siteName: "Swim for all",
     images: [
       {
-        url: "/images/swim-for-all-logo.png",
-        width: 1134,
-        height: 944,
-        alt: "Swim for all logo",
+        url: "/images/swim-for-all-share.png",
+        width: 1200,
+        height: 630,
+        alt: "Swim for all",
       },
     ],
     locale: "en_US",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: "Swim for all - Removing Barriers to Swimming",
     description:
       "We provide free swim equipment kits to children ages 8-12, removing financial and access barriers to swimming lessons and water safety.",
-    images: ["/images/swim-for-all-logo.png"],
+    images: ["/images/swim-for-all-share.png"],
   },
 };
 
