@@ -57,7 +57,7 @@ export default function About() {
           >
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
               <div className="lg:col-span-2">
-                <h2 className="text-3xl font-bold mb-6">From the Founder</h2>
+                <h2 className="text-3xl font-bold mb-6">From the Founder, Anhad Thethi</h2>
                 <blockquote className="border-l-4 border-[var(--brand-primary)] pl-6 py-4">
                   <p className="text-xl text-gray-700 leading-relaxed mb-4">
                     "The first time I stood on a pool deck, I knew swimming would change my life. What I didn't know then was how many kids never get that moment — not because they don't want it, but because a $12 pair of goggles stands in the way."
@@ -78,7 +78,7 @@ export default function About() {
                     className="w-full max-w-xs h-80 object-cover rounded-lg shadow-lg"
                   />
                   <p className="text-xs text-gray-500 text-center mt-2 italic">
-                    Founder and competitive swimmer
+                    Anhad Thethi, Founder and competitive swimmer
                   </p>
                 </div>
               </div>
