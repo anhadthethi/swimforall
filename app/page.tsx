@@ -46,8 +46,8 @@ export default function Home() {
             </h1>
           </div>
           <p className="text-sm sm:text-base md:text-lg mb-5 opacity-95 leading-relaxed text-center max-w-5xl mx-auto flex flex-col items-center">
-            <span className="block whitespace-nowrap text-center">We remove the upfront costs that keep kids out of lessons by providing swim gear kits</span>
-            <span className="block whitespace-nowrap text-center">and connecting families to local programs to get them started with swim.</span>
+            <span className="block text-center md:whitespace-nowrap">We remove the upfront costs that keep kids out of lessons by providing swim gear kits</span>
+            <span className="block text-center md:whitespace-nowrap">and connecting families to local programs to get them started with swim.</span>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <div className="flex-1 sm:flex-none text-center">
