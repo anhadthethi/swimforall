@@ -9,8 +9,43 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://swimforall.vercel.app"),
   title: "Swim for all - Removing Barriers to Swimming",
   description: "We provide free swim equipment kits to children ages 8-12, removing financial and access barriers to swimming lessons and water safety.",
+  icons: {
+    icon: [
+      {
+        url: "/images/swim-for-all-logo-nav.png",
+        type: "image/png",
+      },
+    ],
+    shortcut: "/images/swim-for-all-logo-nav.png",
+    apple: "/images/swim-for-all-logo-nav.png",
+  },
+  openGraph: {
+    title: "Swim for all - Removing Barriers to Swimming",
+    description:
+      "We provide free swim equipment kits to children ages 8-12, removing financial and access barriers to swimming lessons and water safety.",
+    url: "https://swimforall.vercel.app",
+    siteName: "Swim for all",
+    images: [
+      {
+        url: "/images/swim-for-all-logo.png",
+        width: 1134,
+        height: 944,
+        alt: "Swim for all logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Swim for all - Removing Barriers to Swimming",
+    description:
+      "We provide free swim equipment kits to children ages 8-12, removing financial and access barriers to swimming lessons and water safety.",
+    images: ["/images/swim-for-all-logo.png"],
+  },
 };
 
 export default function RootLayout({
