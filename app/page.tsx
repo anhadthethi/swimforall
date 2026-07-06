@@ -1,9 +1,26 @@
 "use client";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
+  const quotes = [
+    '"Every kid deserves to know what it feels like to float."',
+    '"The water doesn\'t check your zip code. Neither do we."',
+    '"A $25 kit shouldn\'t be the reason a child never learns to swim."',
+  ];
+
+  const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentQuoteIndex((prev) => (prev + 1) % quotes.length);
+    }, 4500);
+
+    return () => clearInterval(intervalId);
+  }, [quotes.length]);
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -66,6 +83,21 @@ export default function Home() {
               <p className="text-gray-600">We guide with  clear steps and local options so families can begin quickly.</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Rotating Quote Section */}
+      <section className="flex items-center justify-center py-10 md:py-14 px-4">
+        <div className="max-w-5xl mx-auto text-center">
+          <motion.p
+            key={currentQuoteIndex}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-2xl md:text-3xl lg:text-4xl font-semibold text-[var(--brand-primary)] leading-relaxed"
+          >
+            {quotes[currentQuoteIndex]}
+          </motion.p>
         </div>
       </section>
 
